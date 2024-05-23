@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+  #home {
+    color: #fff;
+    background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)),url(./src/imagenes/common-bg.svg);
+    background-position: center;
+    background-repeat: repeat;
+    height: 100vh;
+    max-height: 120rem;
+    position: relative;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  
+  .sticky a:hover {
+    color: #0284C7; /* Cambiar color del texto al ser pegajoso al pasar el mouse */
+  }
+  
+  .sticky-menu {
+    color: white !important;
+  }
+  
+  .non-sticky-menu {
+    color: #0284C7 !important;
+  }
+
+  .non-sticky-menu:hover {
+    color: white !important;
+  }
+  
+  
