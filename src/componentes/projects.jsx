@@ -3,7 +3,6 @@ import tetrisImage from '../imagenes/proyecto-tetris.png';
 import ticketsImage from '../imagenes/proyecto-tickets.png';
 import memoryImage from '../imagenes/proyecto-memory.png';
 
-
 function Project({ title, description, imageSrc, projectUrl }) {
   const [expanded, setExpanded] = useState(false);
 
@@ -14,23 +13,20 @@ function Project({ title, description, imageSrc, projectUrl }) {
         style={{ backgroundImage: `url(${imageSrc})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg flex items-center justify-center">
-          {!expanded && (
-            <div className="text-center">
-              <h3 className="text-white text-2xl lg:text-8xl font-bold mb-4">{title}</h3>
-              <button
-                onClick={() => setExpanded(true)}
-                className="py-2 px-4 bg-sky-600 text-white font-bold rounded-md shadow-md hover:bg-sky-500"
-              >
-                Ver más
-              </button>
-            </div>
-          )}
+          <div className="text-center">
+            <h3 className="text-white text-2xl lg:text-8xl font-bold mb-4">{title}</h3>
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="py-2 px-4 bg-sky-600 text-white font-bold rounded-md shadow-md hover:bg-sky-500"
+            >
+              {expanded ? "Ocultar" : "Ver más"}
+            </button>
+          </div>
         </div>
       </div>
       {expanded && (
         <div className="mt-4 bg-white rounded-lg shadow-md p-4 lg:p-8">
           <div className="mb-4">
-            <h3 className="text-xl text-sky-600 lg:text-3xl font-bold mb-2 text-center">{title}</h3>
             <p className="text-gray-800">{description}</p>
           </div>
           <a href={projectUrl} className="block w-full text-center py-3 bg-sky-600 text-white font-bold rounded-md shadow-md hover:bg-sky-500">Ver Proyecto</a>
