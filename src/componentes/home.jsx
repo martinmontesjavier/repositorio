@@ -1,4 +1,3 @@
-import { Redes } from "./redes";
 import computerImage from '../imagenes/ordenador-home.jpg';
 
 export function Home() {

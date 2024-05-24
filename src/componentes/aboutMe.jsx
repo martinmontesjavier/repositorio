@@ -1,3 +1,16 @@
+import htmlImage from '../imagenes/html.png';
+import cssImage from '../imagenes/css.png';
+import jsImage from '../imagenes/js.png';
+import reactImage from '../imagenes/react.png';
+import wordpressImage from '../imagenes/wordpress.png';
+import phpImage from '../imagenes/php.png';
+import gitImage from '../imagenes/git.png';
+import githubImage from '../imagenes/github.png';
+import responsiveImage from '../imagenes/responsive.png';
+import terminalImage from '../imagenes/terminal.png';
+
+import javiImage from '../imagenes/yo-2.jpg';
+
 export function AboutMe() {
   return (
     <div className="container-fluid mx-auto px-4 sm:px-6 lg:px-8 pt-20 bg-black text-white">
@@ -12,7 +25,7 @@ export function AboutMe() {
       <div className="flex flex-col lg:flex-row items-center lg:items-start">
         {/* Div izquierdo con la imagen */}
         <div className="lg:w-1/2 mb-4 lg:mb-0">
-          <img className="w-full rounded-lg" src="src/imagenes/yo-2.jpg" alt="Imagen sobre mí" />
+          <img className="w-full rounded-lg" src={javiImage} alt="Imagen sobre mí" />
         </div>
         {/* Div derecho con el texto sobre ti */}
         <div className="lg:w-1/2 lg:pl-8">
@@ -43,16 +56,16 @@ export function AboutMe() {
         </div>
         <div className="skills grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {[
-            { src: "src/imagenes/html.png", alt: "HTML", label: "HTML" },
-            { src: "src/imagenes/css.png", alt: "CSS", label: "CSS" },
-            { src: "src/imagenes/js.png", alt: "JavaScript", label: "JavaScript" },
-            { src: "src/imagenes/react.png", alt: "React", label: "React" },
-            { src: "src/imagenes/wordpress.png", alt: "Wordpress", label: "Wordpress" },
-            { src: "src/imagenes/php.png", alt: "PHP", label: "PHP" },
-            { src: "src/imagenes/git.png", alt: "GIT", label: "GIT" },
-            { src: "src/imagenes/github.png", alt: "Github", label: "Github" },
-            { src: "src/imagenes/responsive.png", alt: "Responsive Design", label: "Responsive Design" },
-            { src: "src/imagenes/terminal.png", alt: "Terminal", label: "Terminal" },
+            { src: htmlImage, alt: "HTML", label: "HTML" },
+            { src: cssImage, alt: "CSS", label: "CSS" },
+            { src: jsImage, alt: "JavaScript", label: "JavaScript" },
+            { src: reactImage, alt: "React", label: "React" },
+            { src: wordpressImage, alt: "Wordpress", label: "Wordpress" },
+            { src: phpImage, alt: "PHP", label: "PHP" },
+            { src: gitImage, alt: "GIT", label: "GIT" },
+            { src: githubImage, alt: "Github", label: "Github" },
+            { src: responsiveImage, alt: "Responsive Design", label: "Responsive Design" },
+            { src: terminalImage, alt: "Terminal", label: "Terminal" },
           ].map((skill, index) => (
             <div key={index} className="bg-white border-2 border-black p-2 rounded flex flex-col justify-center items-center">
               <img className="w-20 h-20 mb-2" src={skill.src} alt={skill.alt} />
