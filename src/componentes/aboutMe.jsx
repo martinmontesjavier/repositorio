@@ -10,6 +10,7 @@ import responsiveImage from '../imagenes/responsive.png';
 import terminalImage from '../imagenes/terminal.png';
 
 import javiImage from '../imagenes/yo-2.jpg';
+import agujeroNegroImage from '../imagenes/agujero-negro.jpg';
 
 export function AboutMe() {
   return (
@@ -45,7 +46,7 @@ export function AboutMe() {
       {/* Div con el apartado de mis conocimientos */}
       <div className="mt-10 py-44" 
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(src/imagenes/agujero-negro.jpg)`,
+          backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${agujeroNegroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
